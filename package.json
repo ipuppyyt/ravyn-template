@@ -1,7 +1,7 @@
 {
   "name": "electron-react-vite-template",
-  "private": true,
-  "version": "1.0.0",
+  "private": false,
+  "version": "1.1.0",
   "type": "module",
   "main": "electron/main.cjs",
   "description": "A modern Electron + React + Vite template with TypeScript, Tailwind CSS, and shadcn/ui components",
@@ -25,7 +25,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prebuild": "tsc -b && vite build",
-    "build": "electron-builder -mwl",
+    "build": "electron-builder -mwl --win nsis --x64",
     "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:8181 && NODE_ENV=development electron .\"",
     "electron:preview": "npm run prebuild && electron ."
   },
@@ -79,9 +79,19 @@
     },
     "win": {
       "target": [
+        "msi",
         "nsis"
       ],
-      "icon": "assets/icon.ico"
+      "icon": "assets/icon.ico",
+      "signingHashAlgorithms": ["sha256"],
+      "certificateFile": "",
+      "certificatePassword": "",
+      "verifyUpdateCodeSignature": false,
+      "rfc3161TimeStampServer": "http://timestamp.sectigo.com",
+      "timeStampServer": "http://timestamp.digicert.com",
+      "publisherName": ["iPuppyYT"],
+      "legalTrademarks": "iPuppyYT",
+      "requestedExecutionLevel": "asInvoker"
     },
     "linux": {
       "target": [
