@@ -5,7 +5,14 @@
   "type": "module",
   "main": "electron/main.cjs",
   "description": "A modern Electron + React + Vite template with TypeScript, Tailwind CSS, and shadcn/ui components",
-  "keywords": ["electron", "react", "vite", "typescript", "tailwindcss", "template"],
+  "keywords": [
+    "electron",
+    "react",
+    "vite",
+    "typescript",
+    "tailwindcss",
+    "template"
+  ],
   "homepage": "https://github.com/ipuppyyt/electron-react-vite-template",
   "repository": {
     "type": "git",
@@ -47,6 +54,7 @@
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
+    "chokidar": "^4.0.3",
     "concurrently": "^9.1.2",
     "electron": "^35.1.5",
     "electron-builder": "^26.0.12",
@@ -83,14 +91,7 @@
         "nsis"
       ],
       "icon": "assets/icon.ico",
-      "signingHashAlgorithms": ["sha256"],
-      "certificateFile": "",
-      "certificatePassword": "",
       "verifyUpdateCodeSignature": false,
-      "rfc3161TimeStampServer": "http://timestamp.sectigo.com",
-      "timeStampServer": "http://timestamp.digicert.com",
-      "publisherName": ["iPuppyYT"],
-      "legalTrademarks": "iPuppyYT",
       "requestedExecutionLevel": "asInvoker"
     },
     "linux": {
