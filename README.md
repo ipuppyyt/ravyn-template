@@ -1,6 +1,6 @@
 # 🚀 Electron + React + TypeScript + Vite Template
 
-![Electron](https://img.shields.io/badge/Electron-2C2E3A?style=for-the-badge&logo=electron&logoColor=9FEAF9) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Electron](https://img.shields.io/badge/Electron-2C2E3A?style=for-the-badge&logo=electron&logoColor=9FEAF9) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 
 ⚡ A production-ready template for building cross-platform desktop applications with:
 
