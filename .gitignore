@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 
+src/electron/renderer
+
 release
 # Editor directories and files
 .vscode/*

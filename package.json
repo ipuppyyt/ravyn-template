@@ -3,7 +3,7 @@
   "private": false,
   "version": "1.1.0",
   "type": "module",
-  "main": "electron/main.cjs",
+  "main": "src/electron/main.cjs",
   "description": "A modern Electron + React + Vite template with TypeScript, Tailwind CSS, and shadcn/ui components",
   "keywords": [
     "electron",
@@ -77,8 +77,8 @@
     "appId": "com.electron.electronreactvite",
     "productName": "Electron React Vite App",
     "files": [
-      "dist/**/*",
-      "electron/**/*"
+      "src/electron/renderer/**/*",
+      "src/electron/**/*"
     ],
     "directories": {
       "buildResources": "assets",
@@ -86,14 +86,14 @@
     },
     "mac": {
       "category": "public.app-category.developer-tools",
-      "icon": "assets/icon.icns"
+      "icon": "src/assets/icon.icns"
     },
     "win": {
       "target": [
         "msi",
         "nsis"
       ],
-      "icon": "assets/icon.ico",
+      "icon": "src/assets/icon.ico",
       "verifyUpdateCodeSignature": false,
       "requestedExecutionLevel": "asInvoker"
     },
@@ -102,7 +102,7 @@
         "deb",
         "AppImage"
       ],
-      "icon": "assets/icon.png",
+      "icon": "src/assets/icon.png",
       "maintainer": "iPuppyYT <dhanushsofficial@gmail.com>"
     }
   }

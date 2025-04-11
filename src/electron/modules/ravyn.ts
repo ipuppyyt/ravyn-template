@@ -1,4 +1,4 @@
-import { version } from '../../package.json';
+import { version } from '../../../package.json';
 import type { Plugin } from 'vite';
 
 
@@ -12,11 +12,7 @@ export function ravyn(): Plugin {
         const message = args.join(' ');
         if (message.includes('vite ') || 
             message.includes('press h to show help') ||
-            message.includes('VITE ') ||
-            message.includes('ready in') ||
             message.includes('Local:') ||
-            message.includes('➜  Local:   http://localhost:8181/') ||
-            message.includes('➜  Network: use --host to expose') ||
             message.includes('Network:')) {
           return;
         }

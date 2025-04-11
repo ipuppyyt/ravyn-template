@@ -159,14 +159,6 @@ function createMenu() {
           },
         },
         {
-          label: "Learn More 3",
-          click: async () => {
-            await shell.openExternal(
-              "https://github.com/ipuppyyt/electron-react-vite-template"
-            );
-          },
-        },
-        {
           label: "About",
           click: () => {
             dialog.showMessageBox({

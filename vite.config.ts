@@ -1,4 +1,4 @@
-import { logger, ravyn } from './electron/modules'
+import { logger, ravyn } from './src/electron/modules'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
@@ -15,10 +15,10 @@ export default defineConfig({
 
   base: './',
   build: {
-    outDir: 'dist/electron/renderer',
+    outDir: 'electron/renderer',
     emptyOutDir: true,
     target: 'esnext',
-    minify: false
+    minify: true
   },
   css: {
     preprocessorOptions: {
@@ -29,7 +29,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./src/content"),
     },
   },
 })
