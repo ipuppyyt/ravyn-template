@@ -34,7 +34,9 @@
     "prebuild": "tsc -b && vite build",
     "build": "electron-builder -mwl --win nsis --x64",
     "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:8181 && NODE_ENV=development electron .\"",
+    "electron:dev:win": "concurrently \"vite\" \"wait-on http://localhost:8181 && set NODE_ENV=development && electron .\"",
     "electron:preview": "npm run prebuild && electron ."
+  
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
@@ -56,6 +58,7 @@
     "autoprefixer": "^10.4.21",
     "chokidar": "^4.0.3",
     "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
     "electron": "^35.1.5",
     "electron-builder": "^26.0.12",
     "eslint": "^9.24.0",

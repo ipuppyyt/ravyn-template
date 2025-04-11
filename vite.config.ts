@@ -1,17 +1,21 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { logger, ravyn } from './electron/modules'
 import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
 import path from 'path'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  logLevel: 'silent',
+  customLogger: logger,
   server: {
     port: 8181,
   },
+  plugins: [react(), tailwindcss(), ravyn()],
+  // DO NOT TOUCH ANYTHING ABOVE THIS LINE
+
   base: './',
   build: {
-    outDir: 'dist',
+    outDir: 'dist/electron/renderer',
     emptyOutDir: true,
     target: 'esnext',
     minify: false

@@ -5,7 +5,7 @@ import '@/assets/styles/index.css';
 import { StrictMode } from 'react';
 import App from './app.tsx';
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('ravyn-app-root')!).render(
   <StrictMode>
     <ThemeProvider defaultTheme="system" storageKey="electron-theme">
       <BrowserRouter>
