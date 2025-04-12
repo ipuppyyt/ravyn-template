@@ -1,4 +1,4 @@
-import { logger, ravyn } from './src/electron/modules'
+import { logger } from './src/electron/modules'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     port: 8181,
   },
-  plugins: [react(), tailwindcss(), ravyn()],
+  plugins: [react(), tailwindcss()],
   // DO NOT TOUCH ANYTHING ABOVE THIS LINE
 
   base: './',

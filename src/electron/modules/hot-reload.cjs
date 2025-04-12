@@ -14,13 +14,12 @@ function configureHotReload(browserWindow) {
     return;
   }
 
-  mainWindow = browserWindow;
-  console.log('🔥 Hot reload enabled.');
-  
+  mainWindow = browserWindow;  
   const electronDir = path.join(__dirname, '..');
   
   const watcher = chokidar.watch(electronDir, {
-    ignored: /node_modules|[/\\]\./,
+    // add nodemodules and runner.cjs to the ignored list
+    ignored: [/\bnode_modules\b/, /\brunner.cjs\b/],
     persistent: true
   });
 

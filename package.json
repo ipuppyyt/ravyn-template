@@ -19,10 +19,8 @@
     "preview": "vite preview",
     "prebuild": "tsc -b && vite build",
     "build": "electron-builder -mwl --win nsis --x64",
-    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:8181 && NODE_ENV=development electron .\"",
-    "electron:dev:win": "concurrently \"vite\" \"wait-on http://localhost:8181 && set NODE_ENV=development && electron .\"",
+    "electron:dev": "node src/electron/modules/runner.cjs",
     "electron:preview": "npm run prebuild && electron ."
-  
   },
   "build": {
     "appId": "com.ipuppyyt.ravyn",

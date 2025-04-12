@@ -7,6 +7,7 @@ function windowManager(mainWindow) {
   
   mainWindow.on("closed", function () {
     mainWindowInstance = null;
+    process.exit(1);
   });
 }
 
