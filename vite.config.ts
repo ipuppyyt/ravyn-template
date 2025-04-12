@@ -10,8 +10,8 @@ export default defineConfig({
   server: {
     port: 8181,
   },
-  plugins: [react(), tailwindcss()],
   // DO NOT TOUCH ANYTHING ABOVE THIS LINE
+  plugins: [react(), tailwindcss()],
 
   base: './',
   build: {
@@ -29,7 +29,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src/content"),
+      "@": path.resolve(__dirname, "./src/renderer"),
     },
   },
 })
