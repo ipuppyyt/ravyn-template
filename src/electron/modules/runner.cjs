@@ -39,7 +39,7 @@ waitOn({
       if (code !== 0) {
         console.clear();
         console.error("\x1b[31m%s\x1b[0m", `💀  Ravyn ${version}`);
-        console.error("\x1b[31m%s\x1b[0m", `💀  App Terminated`);
+        console.error("\x1b[31m%s\x1b[0m", `⚰️   App Terminated`);
         process.exit();
       }
     });
