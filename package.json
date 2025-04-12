@@ -1,9 +1,9 @@
 {
-  "name": "electron-react-vite-template",
+  "name": "ravyn",
   "private": false,
   "version": "1.1.0",
   "type": "module",
-  "main": "src/electron/main.cjs",
+  "main": "src/electron/modules/main.cjs",
   "description": "A modern Electron + React + Vite template with TypeScript, Tailwind CSS, and shadcn/ui components",
   "keywords": [
     "electron",
@@ -13,20 +13,6 @@
     "tailwindcss",
     "template"
   ],
-  "homepage": "https://github.com/ipuppyyt/electron-react-vite-template",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ipuppyyt/electron-react-vite-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ipuppyyt/electron-react-vite-template/issues"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "iPuppyYT",
-    "url": "https://github.com/ipuppyyt",
-    "email": "dhanushsofficial@gmail.com"
-  },
   "scripts": {
     "dev": "vite",
     "lint": "eslint .",
@@ -37,6 +23,39 @@
     "electron:dev:win": "concurrently \"vite\" \"wait-on http://localhost:8181 && set NODE_ENV=development && electron .\"",
     "electron:preview": "npm run prebuild && electron ."
   
+  },
+  "build": {
+    "appId": "com.ipuppyyt.ravyn",
+    "productName": "Ravyn App",
+    "files": [
+      "src/electron/renderer/**/*",
+      "src/electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "release"
+    },
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "src/assets/icon.icns"
+    },
+    "win": {
+      "target": [
+        "msi",
+        "nsis"
+      ],
+      "icon": "src/assets/icon.ico",
+      "verifyUpdateCodeSignature": false,
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "icon": "src/assets/icon.png",
+      "maintainer": "iPuppyYT <dhanushsofficial@gmail.com>"
+    }
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
@@ -73,37 +92,18 @@
     "vite": "^6.2.5",
     "wait-on": "^8.0.3"
   },
-  "build": {
-    "appId": "com.electron.electronreactvite",
-    "productName": "Electron React Vite App",
-    "files": [
-      "src/electron/renderer/**/*",
-      "src/electron/**/*"
-    ],
-    "directories": {
-      "buildResources": "assets",
-      "output": "release"
-    },
-    "mac": {
-      "category": "public.app-category.developer-tools",
-      "icon": "src/assets/icon.icns"
-    },
-    "win": {
-      "target": [
-        "msi",
-        "nsis"
-      ],
-      "icon": "src/assets/icon.ico",
-      "verifyUpdateCodeSignature": false,
-      "requestedExecutionLevel": "asInvoker"
-    },
-    "linux": {
-      "target": [
-        "deb",
-        "AppImage"
-      ],
-      "icon": "src/assets/icon.png",
-      "maintainer": "iPuppyYT <dhanushsofficial@gmail.com>"
-    }
+  "homepage": "https://github.com/ipuppyyt/ravyn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ipuppyyt/ravyn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ipuppyyt/ravyn/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "iPuppyYT",
+    "url": "https://github.com/ipuppyyt",
+    "email": "dhanushsofficial@gmail.com"
   }
 }
