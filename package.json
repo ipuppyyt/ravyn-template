@@ -1,7 +1,7 @@
 {
   "name": "ravyn",
   "private": false,
-  "version": "1.1.0",
+  "version": "1.1.3",
   "type": "module",
   "main": "src/electron/modules/main.js",
   "description": "A modern Electron + React + Vite template with TypeScript, Tailwind CSS, and shadcn/ui components",
