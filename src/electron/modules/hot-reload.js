@@ -22,15 +22,14 @@ function configureHotReload(browserWindow) {
   const electronDir = path.join(__dirname, '..');
   
   const watcher = chokidar.watch(electronDir, {
-    // add nodemodules and runner.cjs to the ignored list
-    ignored: [/\bnode_modules\b/, /\brunner.cjs\b/],
+    ignored: [/\bnode_modules\b/, /\brunner.js\b/],
     persistent: true
   });
 
   watcher.on('change', (filePath) => {
     if (isReloading) return;
     
-    if (filePath.includes('hot-reload.cjs')) return;
+    if (filePath.includes('hot-reload.js')) return;
     
     console.log(`🔄 File ${path.basename(filePath)} has been changed. Reloading...`);
 
@@ -41,13 +40,13 @@ function configureHotReload(browserWindow) {
 
       const fileExt = path.extname(filePath);
     
-    if (fileExt === '.cjs') {
+    if (fileExt === '.js') {
       console.log(`🔄 ${path.basename(filePath)} changed, reloading...`);
       
       try {
         delete require.cache[require.resolve(filePath)];
         
-        if (filePath.includes('main.cjs')) {
+        if (filePath.includes('main.js')) {
           if (mainWindow && !mainWindow.isDestroyed()) {
             mainWindow.webContents.send('main-process-reloading');
             mainWindow.close();
