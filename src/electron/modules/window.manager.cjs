@@ -1,7 +1,17 @@
+let mainWindowInstance = null;
+
 function windowManager(mainWindow) {
+  if (!mainWindow || !mainWindow.webContents) return;
+  
+  mainWindowInstance = mainWindow;
+  
   mainWindow.on("closed", function () {
-    mainWindow = null;
+    mainWindowInstance = null;
   });
 }
 
-module.exports = { windowManager };
+function getMainWindow() {
+  return mainWindowInstance;
+}
+
+module.exports = { windowManager, getMainWindow };

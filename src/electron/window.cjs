@@ -1,17 +1,8 @@
 const { BrowserWindow } = require("electron");
 const path = require("path");
-const {
-  urlHandler,
-  windowLoader,
-  devToolsHandler,
-  windowManager,
-  configureHotReload,
-} = require("./modules/index.cjs");
 
-let mainWindow = null;
-
-function createWindow() {
-  mainWindow = new BrowserWindow({
+function createMainWindow() {
+  const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     center: true,
@@ -27,18 +18,11 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      preload: path.join(__dirname, "modules/preload.js"),
+      preload: path.join(__dirname, "preload.js"),
     },
   });
 
-  urlHandler(mainWindow);
-  windowLoader(mainWindow);
-  devToolsHandler(mainWindow);
-  windowManager(mainWindow);
-
-  if (process.env.NODE_ENV === "development") {
-    configureHotReload(mainWindow);
-  }
+  return mainWindow;
 }
 
-module.exports = { mainWindow, createWindow };
+module.exports = { createMainWindow };

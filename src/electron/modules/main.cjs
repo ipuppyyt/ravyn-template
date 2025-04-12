@@ -1,6 +1,6 @@
 const { app } = require("electron");
 const { setApplicationMenu } = require("../menu.cjs");
-const { mainWindow, createWindow } = require("../window.cjs");
+const { mainWindow, createWindow } = require("./index.cjs");
 
 app.whenReady().then(() => {
   createWindow();
