@@ -1,4 +1,4 @@
-const { app, Menu, BrowserWindow, shell, dialog } = require("electron");
+import { app, Menu, BrowserWindow, shell, dialog } from "electron";
 
 /**
  * Create the application menu
@@ -177,7 +177,4 @@ function setApplicationMenu() {
   Menu.setApplicationMenu(menu);
 }
 
-module.exports = {
-  createMenu,
-  setApplicationMenu,
-};
+export { createMenu, setApplicationMenu };

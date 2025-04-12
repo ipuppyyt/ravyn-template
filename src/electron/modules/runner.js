@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 
-const { spawn } = require("child_process");
-const waitOn = require("wait-on");
-const { version } = require("../../../package.json");
+import { createRequire } from 'module';
+import { spawn } from "child_process";
+import waitOn from "wait-on";
+
+const require = createRequire(import.meta.url);
+const packageJSON = require("../../../package.json");
+const version = packageJSON.version;
 
 // Start Vite dev server
 const vite = spawn("vite", [], {

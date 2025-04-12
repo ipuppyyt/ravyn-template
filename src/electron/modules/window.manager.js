@@ -1,6 +1,6 @@
 let mainWindowInstance = null;
 
-function windowManager(mainWindow) {
+export function windowManager(mainWindow) {
   if (!mainWindow || !mainWindow.webContents) return;
   
   mainWindowInstance = mainWindow;
@@ -11,8 +11,6 @@ function windowManager(mainWindow) {
   });
 }
 
-function getMainWindow() {
+export function getMainWindow() {
   return mainWindowInstance;
 }
-
-module.exports = { windowManager, getMainWindow };

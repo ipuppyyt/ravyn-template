@@ -1,6 +1,6 @@
-const { shell } = require("electron");
+import { shell } from 'electron';
 
-function urlHandler(mainWindow) {
+export function urlHandler(mainWindow) {
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
     if (url.startsWith("file:")) {
       return { action: "allow" };
@@ -13,5 +13,3 @@ function urlHandler(mainWindow) {
     return { action: "allow" };
   });
 }
-
-module.exports = { urlHandler };

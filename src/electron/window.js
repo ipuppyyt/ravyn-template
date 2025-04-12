@@ -1,5 +1,8 @@
-const { BrowserWindow } = require("electron");
-const path = require("path");
+import { BrowserWindow } from "electron";
+import path from "path";
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function createMainWindow() {
   const mainWindow = new BrowserWindow({
@@ -25,4 +28,4 @@ function createMainWindow() {
   return mainWindow;
 }
 
-module.exports = { createMainWindow };
+export { createMainWindow };

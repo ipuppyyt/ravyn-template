@@ -1,9 +1,9 @@
-const { urlHandler } = require("./url-handler.cjs");
-const { windowLoader } = require("./window.loader.cjs");
-const { devToolsHandler } = require("./dev-handler.cjs");
-const { windowManager, getMainWindow } = require("./window.manager.cjs");
-const { configureHotReload } = require("./hot-reload.cjs");
-const { createMainWindow } = require("../window.cjs");
+import { urlHandler } from "./url-handler.js";
+import { windowLoader } from "./window.loader.js";
+import { devToolsHandler } from "./dev-handler.js";
+import { windowManager, getMainWindow } from "./window.manager.js";
+import { configureHotReload } from "./hot-reload.js";
+import { createMainWindow } from "../window.js";
 
 let mainWindow = null;
 
@@ -27,4 +27,4 @@ function createWindow() {
   }
 }
 
-module.exports = { mainWindow, createWindow };
+export { mainWindow, createWindow };

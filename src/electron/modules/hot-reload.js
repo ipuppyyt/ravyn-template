@@ -1,6 +1,7 @@
-const { app } = require('electron');
-const chokidar = require('chokidar');
-const path = require('path');
+import { fileURLToPath } from 'url';
+import { app } from 'electron';
+import chokidar from 'chokidar';
+import path from 'path';
 
 let mainWindow = null;
 let isReloading = false;
@@ -9,6 +10,9 @@ let isReloading = false;
  * Configure hot reload for the main process
  * @param {BrowserWindow} browserWindow
  */
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 function configureHotReload(browserWindow) {
   if (!process.env.NODE_ENV || process.env.NODE_ENV !== 'development') {
     return;
@@ -71,4 +75,4 @@ function configureHotReload(browserWindow) {
   });
 }
 
-module.exports = { configureHotReload };
+export { configureHotReload };

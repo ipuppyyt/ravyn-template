@@ -1,6 +1,6 @@
-const { app } = require("electron");
-const { setApplicationMenu } = require("../menu.cjs");
-const { mainWindow, createWindow } = require("./index.cjs");
+import { app } from "electron";
+import { setApplicationMenu } from "../menu.js";
+import { mainWindow, createWindow } from "./index.js";
 
 app.whenReady().then(() => {
   createWindow();

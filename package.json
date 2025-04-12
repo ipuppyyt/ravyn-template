@@ -3,7 +3,7 @@
   "private": false,
   "version": "1.1.0",
   "type": "module",
-  "main": "src/electron/modules/main.cjs",
+  "main": "src/electron/modules/main.js",
   "description": "A modern Electron + React + Vite template with TypeScript, Tailwind CSS, and shadcn/ui components",
   "keywords": [
     "electron",
@@ -19,7 +19,7 @@
     "preview": "vite preview",
     "prebuild": "tsc -b && vite build",
     "build": "electron-builder -mwl --win nsis --x64",
-    "electron:dev": "node src/electron/modules/runner.cjs",
+    "electron:dev": "node src/electron/modules/runner.js",
     "electron:preview": "npm run prebuild && electron ."
   },
   "build": {
