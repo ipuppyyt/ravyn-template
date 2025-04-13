@@ -9,10 +9,12 @@ export default defineConfig({
   customLogger: logger,
   server: {
     port: 8181,
+    watch: {
+      ignored: ['electron/**', 'node_modules/**'],
+    },
   },
   // DO NOT TOUCH ANYTHING ABOVE THIS LINE
   plugins: [react(), tailwindcss()],
-
   base: './',
   build: {
     outDir: 'electron/renderer',

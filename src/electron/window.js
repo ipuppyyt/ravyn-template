@@ -16,7 +16,11 @@ function createMainWindow() {
     resizable: false,
     fullscreenable: false,
     maximizable: false,
-    minimizable: true,
+    titleBarStyle: "hidden",
+    trafficLightPosition: {
+      x: 10,
+      y: 10,
+    },
     icon: path.join(__dirname, "../assets/icon.png"),
     webPreferences: {
       nodeIntegration: true,

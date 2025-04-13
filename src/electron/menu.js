@@ -155,9 +155,10 @@ function createMenu() {
           click: () => {
             dialog.showMessageBox({
               title: "About",
+              icon: "../assets/icon.png",
               message: `${app.name} ${app.getVersion()}`,
-              detail: "An Electron application with React and Vite",
-              buttons: ["OK"],
+              detail: "An Electron application with React and Vite built with Ravyn Framework/",
+              buttons: ["OK", "Cancel"],
             });
           },
         },

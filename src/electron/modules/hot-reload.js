@@ -1,7 +1,10 @@
+import { createRequire } from 'module';
 import { fileURLToPath } from 'url';
-import { app } from 'electron';
 import chokidar from 'chokidar';
+import { app } from 'electron';
 import path from 'path';
+
+const require = createRequire(import.meta.url);
 
 let mainWindow = null;
 let isReloading = false;
@@ -26,7 +29,7 @@ function configureHotReload(browserWindow) {
     persistent: true
   });
 
-  watcher.on('change', (filePath) => {
+  watcher.on('change', async (filePath) => {
     if (isReloading) return;
     
     if (filePath.includes('hot-reload.js')) return;
@@ -54,7 +57,7 @@ function configureHotReload(browserWindow) {
           app.relaunch();
           app.exit(0);
         } else {
-          const module = require(filePath);
+          const module = await import(filePath);
           if (typeof module.setApplicationMenu === 'function') {
             module.setApplicationMenu();
           }
