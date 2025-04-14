@@ -1,9 +1,9 @@
 {
-  "name": "ravyn",
+  "name": "ravyn-template",
   "private": false,
-  "version": "1.1.3",
+  "version": "1.5.0",
   "type": "module",
-  "main": "src/electron/modules/main.js",
+  "main": "src/electron/index.js",
   "description": "A modern Electron + React + Vite template with TypeScript, Tailwind CSS, and shadcn/ui components",
   "keywords": [
     "electron",
@@ -14,13 +14,12 @@
     "template"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "ravyn dev",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "prebuild": "tsc -b && vite build",
-    "build": "electron-builder -mwl --win nsis --x64",
-    "electron:dev": "node src/electron/modules/runner.js",
-    "electron:preview": "npm run prebuild && electron ."
+    "preview": "npm run prebuild && electron .",
+    "build": "ravyn build",
+    "web:dev": "vite",
+    "web:preview": "vite preview"
   },
   "build": {
     "appId": "com.ipuppyyt.ravyn",
@@ -56,13 +55,12 @@
     }
   },
   "dependencies": {
-    "ravyn-framework": "^1.0.1",
     "@radix-ui/react-slot": "^1.2.0",
     "@shadcn/ui": "^0.0.4",
     "@tailwindcss/vite": "^4.1.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.487.0",
+    "lucide-react": "^0.488.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.5.0",
