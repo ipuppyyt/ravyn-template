@@ -73,7 +73,7 @@
     "@vitejs/plugin-react": "^4.5.2",
     "autoprefixer": "^10.4.21",
     "chokidar": "^4.0.3",
-    "concurrently": "^9.1.2",
+    "concurrently": "^9.2.0",
     "cross-env": "^7.0.3",
     "electron": "^35.5.1",
     "electron-builder": "^26.0.12",
