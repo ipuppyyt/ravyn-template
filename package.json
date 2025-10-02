@@ -62,14 +62,14 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.544.0",
     "react": "^19.2.0",
-    "react-dom": "^19.1.1",
+    "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.3",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "@types/react": "^19.2.0",
-    "@types/react-dom": "^19.1.9",
+    "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.21",
     "chokidar": "^4.0.3",
