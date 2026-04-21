@@ -85,7 +85,7 @@
     "postcss": "^8.5.10",
     "tailwindcss": "^4.2.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.58.2",
+    "typescript-eslint": "^8.59.0",
     "vite": "^6.4.2",
     "wait-on": "^8.0.5"
   },
