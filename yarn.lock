@@ -702,10 +702,10 @@
   resolved "https://registry.yarnpkg.com/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.4.tgz#afbc7ea7cf13e13e562025109646be4763b6ed5f"
   integrity sha512-pWJo6lQAfR6uy1n7ii7PaCc9dLPwTXDYbQpORZU5B548Aqvl2pP1SM1vJGKyxIFqZMHRopRO4CQYX2iXAIB5jA==
 
-"@radix-ui/react-slot@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@radix-ui/react-slot/-/react-slot-1.3.1.tgz#01cb530502d362046348542e074639e31368123c"
-  integrity sha512-Bu/aAQHFFh6/QAvXAeUMurJ9fbW0JUIqlojU/yBXZ7cAVqy75Y7JYYyuCr9zLNF0p4WWoJYV54CTUIf4l7FzTw==
+"@radix-ui/react-slot@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-slot/-/react-slot-1.3.2.tgz#7714bec2730ae2b73f6c34a420f743b80a756705"
+  integrity sha512-nLBh0hpzgQA16ioKAWTSQvGjRj7QcI3pTpngtYZ12b4RP9N8eGSj7ziceHyHe04zrd0bAcLyMijO0ws0DLmDWw==
   dependencies:
     "@radix-ui/primitive" "1.1.7"
     "@radix-ui/react-compose-refs" "1.1.4"
