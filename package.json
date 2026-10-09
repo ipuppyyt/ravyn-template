@@ -86,7 +86,7 @@
     "tailwindcss": "^4.3.1",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.71.1",
-    "vite": "^6.4.3",
+    "vite": "^6.4.4",
     "wait-on": "^8.0.5"
   },
   "homepage": "https://github.com/ipuppyyt/ravyn",
